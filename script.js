@@ -11,27 +11,28 @@ var losses = 0
 wordBlank.textContent = unsolved.toString().replaceAll(",", " ");
 
 startButton.addEventListener("click", countDown);
+secondsLeft = 5;
     //now we want the timer to start
 
 function countDown() {
-    playing = true;
+    playing === true;
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timerCountEl.textContent = secondsLeft;
 
         if(secondsLeft === 0) {
           clearInterval(timerInterval);
-          playing = false;
+          playing === false;
             console.log(secondsLeft);
       //WILL call FUNCTION here for the you lost or you win and to add to wins/losses.
         }
     }, 1000);
 }
 
-function restartTimer(){
+/*function restartTimer(){
   if (playing = false);
   secondsLeft = 5;
-};
+};*/
 
 document.addEventListener("keydown", function(e){
     var letter = e.key;
@@ -43,11 +44,11 @@ document.addEventListener("keydown", function(e){
   }
 )
 
-function restartTimer() {
+/*function restartTimer() {
   while (playing = false) {
     secondsLeft = 5;
   }
-}
+}*/
     /*
     //function setTime() {
   // Sets interval in variable
