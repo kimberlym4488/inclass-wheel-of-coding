@@ -19,14 +19,19 @@ function countDown() {
         secondsLeft--;
         timerCountEl.textContent = secondsLeft;
 
-        if(secondsLeft = 0) {
-            playing = false;
-            clearInterval(timerInterval);
+        if(secondsLeft === 0) {
+          clearInterval(timerInterval);
+          playing = false;
             console.log(secondsLeft);
       //WILL call FUNCTION here for the you lost or you win and to add to wins/losses.
         }
     }, 1000);
 }
+
+function restartTimer(){
+  if (playing = false);
+  secondsLeft = 5;
+};
 
 document.addEventListener("keydown", function(e){
     var letter = e.key;
@@ -37,6 +42,12 @@ document.addEventListener("keydown", function(e){
     }
   }
 )
+
+function restartTimer() {
+  while (playing = false) {
+    secondsLeft = 5;
+  }
+}
     /*
     //function setTime() {
   // Sets interval in variable
