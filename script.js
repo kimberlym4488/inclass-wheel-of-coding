@@ -11,7 +11,6 @@ var losses = 0
 wordBlank.textContent = unsolved.toString().replaceAll(",", " ");
 
 startButton.addEventListener("click", countDown);
-secondsLeft = 5;
     //now we want the timer to start
 
 function countDown() {
@@ -30,7 +29,7 @@ function countDown() {
 }
 
 /*function restartTimer(){
-  if (playing = false);
+  while (playing = false);
   secondsLeft = 5;
 };*/
 
