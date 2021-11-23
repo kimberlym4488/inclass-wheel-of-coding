@@ -11,28 +11,29 @@ var losses = 0
 wordBlank.textContent = unsolved.toString().replaceAll(",", " ");
 
 startButton.addEventListener("click", countDown);
-    //now we want the timer to start
+//Start Button should decrement timer.
+
 
 function countDown() {
-    playing === true;
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timerCountEl.textContent = secondsLeft;
+  secondsLeft = 5;
+  playing === true;
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timerCountEl.textContent = secondsLeft;
+    //now we want the timer to start
 
         if(secondsLeft === 0) {
           clearInterval(timerInterval);
           playing === false;
             console.log(secondsLeft);
-      //WILL call FUNCTION here for the you lost or you win and to add to wins/losses.
         }
+        //now we want the timer to stop, and start over at 5 when the user starts again.
+
+//WILL call FUNCTION here for the you lost or you win and to add to wins/losses.
     }, 1000);
 }
 
-/*function restartTimer(){
-  while (playing = false);
-  secondsLeft = 5;
-};*/
-
+//User should be able to type in letters to fill in the word.
 document.addEventListener("keydown", function(e){
     var letter = e.key;
     console.log(letter);
@@ -43,23 +44,3 @@ document.addEventListener("keydown", function(e){
   }
 )
 
-/*function restartTimer() {
-  while (playing = false) {
-    secondsLeft = 5;
-  }
-}*/
-    /*
-    //function setTime() {
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
- 
-    if(secondsLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
-    
-      };
-    }
- 
-  }, 1000);*/
