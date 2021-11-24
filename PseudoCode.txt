@@ -1,0 +1,11 @@
+PseudoCode
+
+Start Button should decrement timer. - Done
+Some letters should be pre-populated - Done
+User should be able to type in letters to fill in the word.
+When timer ends, the ability to type will stop.
+If the word is filled in, the user will get a win in the win column.
+If the word is not filled in, the user will get a loss in the loss column. 
+    These two items will remain when the user presses start again.
+    These two items will go back to zero when Reset Score is pressed.
+A new word will pop up to be filled in when the start button is pressed again. 
