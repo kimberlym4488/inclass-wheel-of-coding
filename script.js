@@ -22,7 +22,6 @@ function countDown() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timerCountEl.textContent = secondsLeft;
-    playingNow();
     //now we want the timer to start
 
         if(secondsLeft === 0) {
@@ -36,17 +35,19 @@ function countDown() {
       }, 1000);
     }
     
-    function playingNow() {
-    document.addEventListener("keydown", function(e){
-        var letter = e.key;
+    //User should be able to type in letters to fill in the word.
+    
+    document.addEventListener("keydown", function(event){
+      console.log(letter);
+        var letter = event.key;
         if(answer.includes(letter)){
             unsolved[answer.indexOf(letter)] = letter;
-            console.log(letter);
+            return;
     
         }
       }
     )
-    }
+    
   
-//User should be able to type in letters to fill in the word.
+
 
