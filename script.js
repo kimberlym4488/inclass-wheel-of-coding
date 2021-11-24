@@ -38,14 +38,13 @@ function countDown() {
     //User should be able to type in letters to fill in the word.
     
     document.addEventListener("keydown", function(event){
+      var letter = event.key;
       console.log(letter);
-        var letter = event.key;
         if(answer.includes(letter)){
             unsolved[answer.indexOf(letter)] = letter;
-            return;
-    
+
         }
-      }
+        }
     )
     
   
